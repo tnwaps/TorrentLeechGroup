@@ -60,7 +60,7 @@ async def status_message_f(client, message):
             msg += f"{UPLOAD_ICON} {up_speed_string}\n"
             msg += "ETA :-"
             msg += f"{e_t_a}\n"
-            msg += "Leeching is"
+            msg += "Leeching is "
             msg += f"{download_current_status}\n"
             msg += f"<code>/cancel {current_gid}</code>"
             msg += "\n\n"
