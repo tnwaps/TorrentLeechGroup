@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     message_id = 99
     # display the /help message
     await message.reply_text(
-        f"Please Check the<a href='https://telegra.ph/MC-Leecher-Group-07-15'>Rules and Commands</a> Here..",
+        f"Please Check the <a href='https://telegra.ph/MC-Leecher-Group-07-15'>Rules and Commands</a> Here..",
         quote=True
     )
 
