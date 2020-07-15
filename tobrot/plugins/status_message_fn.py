@@ -49,22 +49,20 @@ async def status_message_f(client, message):
             e_t_a = str(download.eta_string())
             current_gid = str(download.gid)
             #
-            msg += f"<u>{downloading_dir_name}</u>"
-            msg += " | "
-            msg += f"{total_length_size}"
-            msg += " | "
-            msg += f"{progress_percent_string}"
-            msg += " | "
-            msg += f"{DOWNLOAD_ICON} {down_speed_string}"
-            msg += " | "
-            msg += f"{UPLOAD_ICON} {up_speed_string}"
-            msg += " | "
-            msg += f"{e_t_a}"
-            msg += " | "
-            msg += f"{download_current_status}"
-            msg += " | "
+            msg += f"Name : <u>{downloading_dir_name}</u>\n"
+            msg += "Total Length : "
+            msg += f"{total_length_size}\n"
+            msg += "Progress : "
+            msg += f"{progress_percent_string}\n"
+            msg += "Download Speed : "
+            msg += f"{DOWNLOAD_ICON} {down_speed_string}\n"
+            msg += "Upload Speed : "
+            msg += f"{UPLOAD_ICON} {up_speed_string}\n"
+            msg += "ETA :-"
+            msg += f"{e_t_a}\n"
+            msg += "Leeching is"
+            msg += f"{download_current_status}\n"
             msg += f"<code>/cancel {current_gid}</code>"
-            msg += " | "
             msg += "\n\n"
         LOGGER.info(msg)
         if msg == "":
@@ -75,7 +73,7 @@ async def status_message_f(client, message):
 async def cancel_message_f(client, message):
     if len(message.command) > 1:
         # /cancel command
-        i_m_s_e_g = await message.reply_text("checking..?", quote=True)
+        i_m_s_e_g = await message.reply_text("Checking..?", quote=True)
         aria_i_p = await aria_start()
         g_id = message.command[1].strip()
         LOGGER.info(g_id)
