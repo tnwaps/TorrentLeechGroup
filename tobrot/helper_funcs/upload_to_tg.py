@@ -76,7 +76,7 @@ async def upload_to_tg(
                 edit_media
             )
     else:
-        if os.path.getsize(local_file_name) > TG_MAX_FILE_SIZE:
+        if os.path.getsize(local_file_name) > 2097152000:
             LOGGER.info("TODO")
             d_f_s = humanbytes(os.path.getsize(local_file_name))
             i_m_s_g = await message.reply_text(
