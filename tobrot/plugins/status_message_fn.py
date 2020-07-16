@@ -49,21 +49,21 @@ async def status_message_f(client, message):
             e_t_a = str(download.eta_string())
             current_gid = str(download.gid)
             #
-            msg += f"Name : <u>{downloading_dir_name}</u>\n"
-            msg += "Total Length : "
+            msg += f"<b>File Name :</b> <u>{downloading_dir_name}</u>\n\n"
+            msg += "<b>Total Length :</b> "
             msg += f"{total_length_size}\n"
-            msg += "Progress : "
+            msg += "<b>Progress :</b> "
             msg += f"{progress_percent_string}\n"
-            msg += "Download Speed : "
+            msg += "<b>Download Speed :</b> "
             msg += f"{DOWNLOAD_ICON} {down_speed_string}\n"
-            msg += "Upload Speed : "
+            msg += "<b>Upload Speed :</b> "
             msg += f"{UPLOAD_ICON} {up_speed_string}\n"
-            msg += "ETA :-"
+            msg += "<b>ETA :-</b>"
             msg += f"{e_t_a}\n"
-            msg += "Leeching is "
+            msg += "<b>Leeching is</b> "
             msg += f"{download_current_status}\n"
             msg += f"<code>/cancel {current_gid}</code>"
-            msg += "\n=== === ===\n\n"
+            msg += "\n\n=== === ===\n\n"
         LOGGER.info(msg)
         if msg == "":
             msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
