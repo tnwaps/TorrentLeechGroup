@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     message_id = 99
     # display the /help message
     await message.reply_text(
-        f"Please Check the <a href='https://telegra.ph/MC-Leecher-Group-07-15'>Rules and Commands</a> Here..",
+        f"Please Check the <a href='https://t.me/torrentsleech/40'>Rules and Commands</a> Here..",
         quote=True
     )
 
@@ -48,12 +48,12 @@ async def rename_message_f(client, message):
     inline_keyboard.append([
         pyrogram.InlineKeyboardButton(
             text="Check Other Bots and Links",
-            url="https://t.me/MC_LinkzZ"
+            url="https://t.me/torrentsleech"
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "Please use @MC_RenamerBot",
+        "Please use @tnvipme",
         quote=True,
         reply_markup=reply_markup
     )
