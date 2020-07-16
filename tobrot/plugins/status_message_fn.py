@@ -63,7 +63,7 @@ async def status_message_f(client, message):
             msg += "Leeching is "
             msg += f"{download_current_status}\n"
             msg += f"<code>/cancel {current_gid}</code>"
-            msg += "\n\n"
+            msg += "\n=== === ===\n\n"
         LOGGER.info(msg)
         if msg == "":
             msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
